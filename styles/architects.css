@@ -1,8 +1,26 @@
 /* work sans font */
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@400;500;700;800&display=swap');
+  /* shared styles */
  *{
 font-family: 'Work Sans', sans-serif;
   }
+  .btn-primary{
+    background-color: #ff900e;
+    border-radius: 8px;
+    border: 0;
+    padding: 20px 25px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .text-light-gray{
+    color: #727272;
+
+  }
+
+
+  /* -----heading styles */
   header{
     background-color: rgba(255, 144, 14, 0.10);
     padding: 50px 240px;
@@ -25,7 +43,7 @@ font-family: 'Work Sans', sans-serif;
     text-decoration: none;
     color:#424242 ;
   }
-  .nav-title{
+  .section-title{
     font-size: 3rem;
     font-weight: 700;
     color: #131313;
@@ -42,20 +60,8 @@ font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     color:#131313;
   }
-  .banner-description{
-    color: #727272;
+  
 
-  }
-  .btn-primary{
-    background-color: #ff900e;
-    border-radius: 8px;
-    border: 0;
-    padding: 20px 25px;
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
   .banner img{
     width: 100%;
     margin-top: 20px;
@@ -66,7 +72,7 @@ font-family: 'Work Sans', sans-serif;
 
   main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
     
   }
   .teams-container{
@@ -94,14 +100,51 @@ font-family: 'Work Sans', sans-serif;
     font-weight: 700;
   }
 
+  /* fact section */
+  .facts-card-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .facts-card-container .card{
+    border:1px solid #ff900e ;
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+
+  }
+  .facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #727272;
+    margin-top: 5px;
+  }
+
 
   /* responsive media query */
   @media screen and (max-width:576px) {
     header{
       padding: 20px;
     }
-    nav{
+    nav,
+    .facts-card-container,
+    .teams-container{
       flex-direction: column;
+    }
+    .teams-img-container{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .tams-content, .facts-card-container{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .facts-card-container{
+      gap: 20px;
     }
     
   }
@@ -110,7 +153,8 @@ font-family: 'Work Sans', sans-serif;
     header{
       padding: 50px;
     }
-    nav {
+    nav,
+    .teams-container{
       flex-direction: column;
     }
     
