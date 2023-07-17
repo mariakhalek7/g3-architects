@@ -118,16 +118,30 @@ font-family: 'Work Sans', sans-serif;
     background: #fff;
     box-shadow:  0px 4px 30px 0px rgba(0, 0, 0, 0.06);
   }
+  .feature-img img{
+    height: 90%;
+    margin-left: 90px;
+
+  }
   .ten-years-badge{
     border-radius: 8px;
     background: #ff900e;
     color: #fff;
     width: 342px;
     padding: 40px;
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    
     
   }
   .ten-years-badge h2{
     font-size: 4rem;
+    margin: 0;
+  }
+  .ten-years-badge p {
+    font-size: 1.5rem;
+
   }
 
   /* fact section */
@@ -178,9 +192,18 @@ font-family: 'Work Sans', sans-serif;
     nav,
     .facts-card-container,
     .teams-container,
+    .features,
     .sponsors-img-container
     {
       flex-direction: column;
+    }
+    .feature-img img{
+      width: 100%;
+      margin-left: 0;
+    }
+    .ten-years-badge{
+      position:static ;
+      max-width: 300px;
     }
     .teams-img-container{
       grid-template-columns: repeat(1, 1fr);
@@ -201,7 +224,8 @@ font-family: 'Work Sans', sans-serif;
     }
     nav,
     .teams-container,
-    .sponsors-img-container
+    .sponsors-img-container,
+    .features
     {
       flex-direction: column;
     }
